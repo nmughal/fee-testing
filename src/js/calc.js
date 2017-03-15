@@ -16,9 +16,10 @@
         }
 
         numbers.forEach(function addThem(num) {
-            total += num;
+            total += Number(num);
         });
 
+        return total;
     };
 
     /**
