@@ -15,7 +15,7 @@
           return total;
 
         } if(!Array.isArray(numbers)) {
-          return undefined;
+          return NaN;
         }
 
         numbers.forEach(function addThem(num) {
