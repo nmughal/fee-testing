@@ -12,7 +12,10 @@
         let total = 0;
 
         if (!numbers) {
-            return total;
+          return total;
+
+        } if(!Array.isArray(numbers)) {
+          return undefined;
         }
 
         numbers.forEach(function addThem(num) {
@@ -30,11 +33,12 @@
      * @param  {Number} topNumber  The number to get the factorial value for
      * @return {Number}            The final factorial value
      */
-    function factorial(topNumber) {
-        const total = 0;
+    window.calc.factorial = function factorial(topNumber) {
+        let total = 1;
 
-        if (typeof(topNumber) !== 'number') {
-            return 0;
+        topNumber = Number(topNumber);
+        if (typeof(topNumber) !== 'number' || Number.isNaN(topNumber)) {
+          return NaN;
         }
 
         for (let i = 1; i <= topNumber; i++) {
@@ -42,6 +46,6 @@
         }
 
         return total;
-    }
+    };
 
 })();
