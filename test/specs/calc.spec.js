@@ -34,7 +34,7 @@
 
         it('should let user know input is not a number', function(){
           let result = window.calc.sum('hello');
-          expect(result).to.be.undefined;
+          expect(result).to.be.NaN;
 
         });
 
